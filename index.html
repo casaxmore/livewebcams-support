@@ -1,57 +1,226 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - Live Webcams</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        img {
-            width: 100px;
-            margin-bottom: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #555;
-            line-height: 1.5;
-        }
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            color: white;
-            background-color: #007bff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f8f9">
+  <meta name="description" content="From your favourite view to your next discovery. Find an answer, report a camera, or tell us how we can help.">
+  <title>Live Webcams · Help &amp; contact</title>
+  <link rel="icon" href="icono.jpg" type="image/jpeg">
+  <style>
+    :root{--paper:#f4f8f9;--white:#fff;--ink:#102c39;--muted:#526d78;--green:#087980;--pine:#073e50;--line:#d9e5e8;--mint:#a7f1df;--radius:26px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}a{color:inherit}button{font:inherit}a,button,summary{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #087980;outline-offset:5px}a{text-underline-offset:4px}.wrap{max-width:1140px;margin:auto;padding:0 36px}.skip{position:absolute;top:-80px;left:20px;background:var(--pine);color:white;padding:12px;z-index:10}.skip:focus{top:10px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 0;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-size:17px;font-weight:750;letter-spacing:-.4px}.brand img{width:42px;height:42px;border-radius:12px;border:1px solid #152b2510}.brand small{display:block;font-weight:450;font-size:12px;letter-spacing:.1px;color:var(--muted)}.nav{display:flex;gap:28px;align-items:center}.nav>a{font-size:13px;text-decoration:none;color:var(--muted);font-weight:600}.nav>a:hover{color:var(--green)}.languages{display:flex;padding:4px;border:1px solid var(--line);border-radius:50px;gap:2px}.languages button{border:0;background:transparent;color:var(--muted);padding:7px 11px;border-radius:24px;cursor:pointer;font-size:12px;font-weight:650;min-height:36px}.languages button[aria-pressed="true"]{background:var(--pine);color:white}
+    .hero{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:72px;padding:82px 0 70px}.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:750;letter-spacing:1.8px;text-transform:uppercase;color:var(--green)}.dot{width:7px;height:7px;border-radius:50%;background:#0c8f91;box-shadow:0 0 0 5px #0c8f9116}h1{font-size:clamp(40px,4.6vw,60px);line-height:1.08;letter-spacing:-2.8px;font-weight:720;margin:24px 0}h1 span{display:block;color:var(--green)}.lead{font-size:17px;line-height:1.75;color:var(--muted);max-width:460px}.hero-note{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-top:30px}.hero-note svg{width:15px;height:15px;flex:none}
+    .contact-card{position:relative;overflow:hidden;background:var(--pine);color:white;border-radius:var(--radius);padding:35px;box-shadow:0 20px 55px #073e5013}.contact-card:before{content:"";position:absolute;right:-75px;top:-100px;width:270px;height:270px;border:1px solid #ffffff13;border-radius:50%;pointer-events:none}.contact-card:after{content:"";position:absolute;right:-50px;top:-75px;width:220px;height:220px;border:1px solid #ffffff13;border-radius:50%;pointer-events:none}.contact-top{display:flex;justify-content:space-between;align-items:center;gap:16px}.contact-icon{width:50px;height:50px;display:grid;place-items:center;border:1px solid #ffffff28;border-radius:16px;color:#c9e6bd}.contact-icon svg{width:24px;height:24px}.contact-label{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#d3e4d4}.contact-card h2{font-size:27px;line-height:1.2;letter-spacing:-.8px;margin:28px 0 12px}.contact-card p{font-size:14px;color:#c8d8cc;margin:0 0 24px}.email{display:inline-block;font-size:clamp(16px,2vw,21px);font-weight:550;letter-spacing:-.3px;text-decoration:none;margin-bottom:26px;overflow-wrap:anywhere}.email:hover{text-decoration:underline}.contact-button{position:relative;display:flex;justify-content:space-between;gap:14px;align-items:center;padding:15px 19px;background:var(--mint);border-radius:12px;color:var(--pine);text-decoration:none;font-size:14px;font-weight:700;min-height:50px;transition:background .2s,transform .2s}.contact-button:hover{background:#edf7e7;transform:translateY(-2px)}.contact-button svg{width:18px;height:18px;flex:none}.mail-note{display:block;margin-top:12px;font-size:11px;color:#b4cbb9;text-align:center}
+    .preparation{background:#e9f3f4;border:1px solid #d6e6e8;border-radius:var(--radius);padding:28px 30px 30px}.section-label{font-size:11px;letter-spacing:1.5px;font-weight:750;text-transform:uppercase;color:var(--green)}.prep-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:25px}.prep-heading h2{font-size:21px;line-height:1.3;letter-spacing:-.6px;margin:8px 0 0}.prep-heading>p{font-size:12px;color:var(--muted);margin:0}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;list-style:none;padding:0;margin:0}.step-title{display:flex;gap:10px;align-items:center;font-size:13px;font-weight:700}.number{width:25px;height:25px;border-radius:50%;background:#cfebe7;color:#176c70;display:grid;place-items:center;font-size:11px;flex:none}.steps p{margin:9px 0 0 35px;font-size:12px;color:var(--muted);line-height:1.75}
+    .faq{display:grid;grid-template-columns:.65fr 1.35fr;gap:65px;padding:78px 0}.faq-heading{position:sticky;top:28px;align-self:start}.faq-heading h2{font-size:35px;line-height:1.15;letter-spacing:-1.2px;margin:13px 0 16px}.faq-heading p{font-size:14px;color:var(--muted);margin:0;max-width:250px}.faq-list{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line)}summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;min-height:76px;padding:20px 0;font-size:14px;font-weight:650;line-height:1.5}summary::-webkit-details-marker{display:none}summary:after{content:"+";font-size:23px;font-weight:400;color:var(--green);flex:none;width:22px;text-align:center}details[open] summary:after{content:"−"}.answer{padding:0 35px 24px 0;font-size:13px;line-height:1.85;color:var(--muted)}.answer p{margin:0 0 12px}.answer p:last-child{margin:0}.answer a{color:var(--green)}
+    .closing{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:26px 30px;border:1px solid var(--line);border-radius:20px;background:#fff9;margin-bottom:55px}.closing h2{font-size:17px;letter-spacing:-.3px;margin:0 0 4px}.closing p{font-size:13px;color:var(--muted);margin:0}.closing a{font-size:13px;font-weight:650;text-decoration:none;color:var(--green);white-space:nowrap;padding:12px 0}.closing a:hover{text-decoration:underline}footer{border-top:1px solid var(--line);padding:24px 0 30px;display:flex;justify-content:space-between;gap:20px;font-size:11px;color:var(--muted)}.footer-brand{font-weight:650;color:var(--ink)}footer a{text-decoration:none}footer a:hover{text-decoration:underline}
+    @media(max-width:850px){.hero{gap:35px;padding:60px 0}.wrap{padding:0 25px}.hero h1{font-size:44px;letter-spacing:-2px}.contact-card{padding:28px}.faq{gap:35px}.prep-heading{display:block}.prep-heading>p{margin-top:12px}.steps{gap:18px}}
+    @media(max-width:620px){.wrap{padding:0 20px}header{padding:20px 0}.nav{gap:0}.nav>a{display:none}.brand{font-size:16px}.brand img{width:38px;height:38px}.hero{grid-template-columns:1fr;padding:42px 0;gap:30px}.hero h1{font-size:44px;margin:22px 0;letter-spacing:-2px}.lead{font-size:16px}.hero-note{margin-top:20px}.contact-card{padding:28px}.contact-card h2{margin-top:24px}.email{font-size:21px}.steps{grid-template-columns:1fr;gap:20px}.steps p{font-size:13px}.preparation{padding:25px}.prep-heading{margin-bottom:22px}.faq{grid-template-columns:1fr;gap:24px;padding:48px 0}.faq-heading{position:static}.faq-heading h2{font-size:30px}.faq-heading p{max-width:none}.closing{align-items:flex-start;flex-direction:column;gap:10px;padding:24px;margin-bottom:38px}footer{flex-direction:column;gap:8px}summary{font-size:14px;min-height:72px}.answer{font-size:14px}.hero-note{line-height:1.6}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+    .privacy-summary{border-top:1px solid #ffffff26;margin-top:20px;padding-top:15px;font-size:12px;line-height:1.7;color:#d5e2d7}.contact-card .privacy-summary p{font-size:12px;line-height:1.7;margin:5px 0 9px;color:#c8d8cc}.privacy-summary strong{font-weight:650;color:#fff}.privacy-summary a{font-weight:600;color:#e1f0d9}footer{flex-wrap:wrap}
+    .hero{gap:52px}.contact-card:before{width:320px;height:320px;right:-155px;top:-90px}.contact-card:after{width:250px;height:320px;right:-120px;top:-90px}.contact-card{background:linear-gradient(145deg,#073e50,#075d65)}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <img src="icono.jpg" alt="App logo">
-        <h1>Support - Live Webcams</h1>
-        <p>Welcome to the Live Webcams support page. If you have any questions or issues with the app, feel free to contact us.</p>
-        <a href="mailto:casaxmore@gmail.com" class="button">Contact Support</a>
-    </div>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<div class="wrap">
+  <header>
+    <a href="./" class="brand" aria-label="Live Webcams"><img src="icono.jpg" alt="" width="42" height="42"><span>Live Webcams<small data-i18n="brandSubtitle">Help &amp; contact</small></span></a>
+    <nav class="nav" aria-label="Main navigation" data-label="nav">
+      <a href="#preguntas" data-i18n="navFaq">Quick answers</a>
+      <a href="#contacto" data-i18n="navContact">Contact</a>
+      <div class="languages" role="group" aria-label="Language" data-label="language">
+        <button type="button" lang="es" data-language="es" aria-pressed="false" aria-label="Español">ES</button>
+        <button type="button" lang="en" data-language="en" aria-pressed="true" aria-label="English">EN</button>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="eyebrow"><span class="dot" aria-hidden="true"></span><span data-i18n="eyebrow">LIVE WEBCAMS · OFFICIAL SUPPORT</span></div>
+        <h1 id="hero-title"><span style="color:var(--ink)" data-i18n="headline">A world to explore.</span><span data-i18n="headlineAccent">A hand when you need it.</span></h1>
+        <p class="lead" data-i18n="intro">From your favourite view to your next discovery. Find an answer, report a camera, or tell us how we can help.</p>
+        <p class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span data-i18n="direct">Support for iPhone and iPad, directly from Casaxmore.</span></p>
+      </div>
+      <section class="contact-card" id="contacto" aria-labelledby="contact-title">
+        <div class="contact-top"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></div><span class="contact-label" data-i18n="contactTag">LET’S TALK</span></div>
+        <h2 id="contact-title" data-i18n="contactTitle">A question. A camera. An idea.</h2>
+        <p data-i18n="contactText">Tell us what is happening and we’ll look into it with you.</p>
+        <a href="mailto:casaxmore@gmail.com" class="email">casaxmore@gmail.com</a>
+        <a class="contact-button" id="email-support" href="mailto:casaxmore@gmail.com?subject=Live%20Webcams%20%E2%80%94%20Support"><span data-i18n="contactButton">Email support</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <small class="mail-note" data-i18n="mailNote">Opens your email app. You choose whether to send.</small>
+        <aside class="privacy-summary" aria-label="Contact privacy" data-label="privacyLabel">
+          <strong data-i18n="privacyTitle">Your privacy</strong>
+          <p data-i18n="privacySummary">José Manuel Casabona (Casaxmore) uses your email to answer your request: app support on a contractual basis, and general enquiries on a legitimate-interest basis. Gmail and GitHub provide email and hosting, which may involve international processing. You can exercise your data-protection rights by emailing us.</p>
+          <a data-privacy-link href="privacy.html?lang=en" data-i18n="privacyDetails">Read the support privacy notice</a>
+        </aside>
+      </section>
+    </section>
+    <section class="preparation" aria-labelledby="prepare-title">
+      <div class="prep-heading"><div><span class="section-label" data-i18n="prepareTag">HELP US HELP YOU</span><h2 id="prepare-title" data-i18n="prepareTitle">Three details to get started.</h2></div><p data-i18n="prepareNote">Include only what is needed.</p></div>
+      <ol class="steps">
+        <li><div class="step-title"><span class="number" aria-hidden="true">01</span><span data-i18n="deviceTitle">Your device</span></div><p data-i18n="deviceText">Your iPhone or iPad model, iOS or iPadOS version, and Live Webcams app version.</p></li>
+        <li><div class="step-title"><span class="number" aria-hidden="true">02</span><span data-i18n="issueTitle">The camera or feature</span></div><p data-i18n="issueText">The camera name, country and source, or the feature you were using. An official camera link can help.</p></li>
+        <li><div class="step-title"><span class="number" aria-hidden="true">03</span><span data-i18n="contextTitle">What happened</span></div><p data-i18n="contextText">Describe the steps and any message shown. Hide personal information in screenshots. Don’t send passwords, payment details or your precise location.</p></li>
+      </ol>
+    </section>
+    <section class="faq" id="preguntas" aria-labelledby="faq-title">
+      <div class="faq-heading"><span class="section-label" data-i18n="faqTag">QUICK ANSWERS</span><h2 id="faq-title" data-i18n="faqTitle">Keep exploring.</h2><p data-i18n="faqIntro">A few answers about cameras, discovery, location and Pro.</p></div>
+      <div class="faq-list">
+<details><summary data-i18n="q0">Why is a camera unavailable?</summary><div class="answer"><p data-i18n="a0">Camera images come from their source operators. Maintenance, weather, connection problems or source changes can interrupt a feed. Check your connection, refresh the app and try another camera. If it persists, email us the camera name, country and source.</p></div></details>
+<details><summary data-i18n="q1">Are all cameras live video?</summary><div class="answer"><p data-i18n="a1">Many sources provide periodically refreshed still images; some offer time-lapse video. Check the source image time when it is available. A camera may show an earlier image, darkness or limited visibility. Refresh rates and image quality depend on the source.</p></div></details>
+<details><summary data-i18n="q2">How do Discover and daylight suggestions work?</summary><div class="answer"><p data-i18n="a2">Open Discover, choose an interest or tap Surprise me. The daylight filter estimates daylight from the camera’s coordinates and time. It does not guarantee sunshine, visibility or that the latest image was just captured.</p></div></details>
+<details><summary data-i18n="q3">How can I enlarge an image?</summary><div class="answer"><p data-i18n="a3">Open a camera, tap Full screen and use two fingers to zoom and move around the image. The detail available depends on the original source resolution.</p></div></details>
+<details><summary data-i18n="q4">Do I need to share my location?</summary><div class="answer"><p data-i18n="a4">Location is optional and is used for Around Me while you use the app. You can explore the map, search and categories without granting it. Live Webcams does not offer location sharing with other people. Automatic AdMob coarse-location collection is disabled; IP-based general location estimation may still occur.</p></div></details>
+<details><summary data-i18n="q5">I purchased Pro. How do I restore it?</summary><div class="answer"><p data-i18n="a5">Open Settings in Live Webcams and select Restore purchases using the same Apple Account as the purchase. Pro removes ads and permanently unlocks supported continents and Pro benefits. If access is not restored, tell us what happens without sending passwords or full payment details.</p></div></details>
+<details><summary data-i18n="q6">How does temporary access work?</summary><div class="answer"><p data-i18n="a6">Where offered, completing an optional rewarded ad unlocks the selected continent for one hour. This is temporary access, separate from the permanent Pro purchase. The app displays the remaining access time. If the ad is unavailable, try again later.</p></div></details>
+<details><summary data-i18n="q7">Can I suggest a camera or an improvement?</summary><div class="answer"><p data-i18n="a7">Of course. Send the official source link and tell us why the place interests you. We review availability and reuse conditions before considering a camera. Inclusion is not guaranteed. Feature ideas are welcome too.</p></div></details>
+      </div>
+    </section>
+    <section class="closing" aria-labelledby="closing-title"><div><h2 id="closing-title" data-i18n="closingTitle">Still need a hand?</h2><p data-i18n="closingText">Send us a question or suggest your next view of the world.</p></div><a href="#contacto" data-i18n="closingButton">Contact Casaxmore ↗</a></section>
+  </main>
+  <footer><span><span class="footer-brand">Live Webcams</span> <span aria-hidden="true">/</span> Casaxmore</span><span data-i18n="footer">Support for Live Webcams on iPhone and iPad.</span><a data-privacy-link href="privacy.html?lang=en" data-i18n="privacyFooter">Support privacy</a><a href="app-privacy.html" data-i18n="appPrivacy">App privacy policy</a><a href="mailto:casaxmore@gmail.com">casaxmore@gmail.com</a></footer>
+</div>
+<script>
+  'use strict';
+  const messages = {
+  "en": {
+    "skip": "Skip to content",
+    "brandSubtitle": "Help & contact",
+    "nav": "Main navigation",
+    "language": "Language",
+    "navFaq": "Quick answers",
+    "navContact": "Contact",
+    "eyebrow": "LIVE WEBCAMS · OFFICIAL SUPPORT",
+    "headline": "A world to explore.",
+    "headlineAccent": "A hand when you need it.",
+    "intro": "From your favourite view to your next discovery. Find an answer, report a camera, or tell us how we can help.",
+    "direct": "Support for iPhone and iPad, directly from Casaxmore.",
+    "contactTag": "LET’S TALK",
+    "contactTitle": "A question. A camera. An idea.",
+    "contactText": "Tell us what is happening and we’ll look into it with you.",
+    "contactButton": "Email support",
+    "mailNote": "Opens your email app. You choose whether to send.",
+    "prepareTag": "HELP US HELP YOU",
+    "prepareTitle": "Three details to get started.",
+    "prepareNote": "Include only what is needed.",
+    "deviceTitle": "Your device",
+    "deviceText": "Your iPhone or iPad model, iOS or iPadOS version, and Live Webcams app version.",
+    "issueTitle": "The camera or feature",
+    "issueText": "The camera name, country and source, or the feature you were using. An official camera link can help.",
+    "contextTitle": "What happened",
+    "contextText": "Describe the steps and any message shown. Hide personal information in screenshots. Don’t send passwords, payment details or your precise location.",
+    "faqTag": "QUICK ANSWERS",
+    "faqTitle": "Keep exploring.",
+    "faqIntro": "A few answers about cameras, discovery, location and Pro.",
+    "closingTitle": "Still need a hand?",
+    "closingText": "Send us a question or suggest your next view of the world.",
+    "closingButton": "Contact Casaxmore ↗",
+    "footer": "Support for Live Webcams on iPhone and iPad.",
+    "privacyLabel": "Contact privacy",
+    "privacyTitle": "Your privacy",
+    "privacySummary": "José Manuel Casabona (Casaxmore) uses your email to answer your request: app support on a contractual basis, and general enquiries on a legitimate-interest basis. Gmail and GitHub provide email and hosting, which may involve international processing. You can exercise your data-protection rights by emailing us.",
+    "privacyDetails": "Read the support privacy notice",
+    "privacyFooter": "Support privacy",
+    "appPrivacy": "App privacy policy",
+    "pageTitle": "Live Webcams · Help & contact",
+    "subject": "Live Webcams — Support",
+    "emailBody": "Hello, I need help with Live Webcams.\n\nDevice model:\niOS / iPadOS version:\nLive Webcams version:\n\nCamera name, country and source (if relevant):\nWhat happens:\nSteps to reproduce:\n",
+    "q0": "Why is a camera unavailable?",
+    "a0": "Camera images come from their source operators. Maintenance, weather, connection problems or source changes can interrupt a feed. Check your connection, refresh the app and try another camera. If it persists, email us the camera name, country and source.",
+    "q1": "Are all cameras live video?",
+    "a1": "Many sources provide periodically refreshed still images; some offer time-lapse video. Check the source image time when it is available. A camera may show an earlier image, darkness or limited visibility. Refresh rates and image quality depend on the source.",
+    "q2": "How do Discover and daylight suggestions work?",
+    "a2": "Open Discover, choose an interest or tap Surprise me. The daylight filter estimates daylight from the camera’s coordinates and time. It does not guarantee sunshine, visibility or that the latest image was just captured.",
+    "q3": "How can I enlarge an image?",
+    "a3": "Open a camera, tap Full screen and use two fingers to zoom and move around the image. The detail available depends on the original source resolution.",
+    "q4": "Do I need to share my location?",
+    "a4": "Location is optional and is used for Around Me while you use the app. You can explore the map, search and categories without granting it. Live Webcams does not offer location sharing with other people. Automatic AdMob coarse-location collection is disabled; IP-based general location estimation may still occur.",
+    "q5": "I purchased Pro. How do I restore it?",
+    "a5": "Open Settings in Live Webcams and select Restore purchases using the same Apple Account as the purchase. Pro removes ads and permanently unlocks supported continents and Pro benefits. If access is not restored, tell us what happens without sending passwords or full payment details.",
+    "q6": "How does temporary access work?",
+    "a6": "Where offered, completing an optional rewarded ad unlocks the selected continent for one hour. This is temporary access, separate from the permanent Pro purchase. The app displays the remaining access time. If the ad is unavailable, try again later.",
+    "q7": "Can I suggest a camera or an improvement?",
+    "a7": "Of course. Send the official source link and tell us why the place interests you. We review availability and reuse conditions before considering a camera. Inclusion is not guaranteed. Feature ideas are welcome too."
+  },
+  "es": {
+    "skip": "Saltar al contenido",
+    "brandSubtitle": "Ayuda y contacto",
+    "nav": "Navegación principal",
+    "language": "Idioma",
+    "navFaq": "Respuestas rápidas",
+    "navContact": "Contacto",
+    "eyebrow": "LIVE WEBCAMS · SOPORTE OFICIAL",
+    "headline": "Un mundo por explorar.",
+    "headlineAccent": "Una mano cuando la necesitas.",
+    "intro": "Desde tu vista favorita hasta tu próximo descubrimiento. Encuentra una respuesta, avisa de una cámara o cuéntanos cómo podemos ayudarte.",
+    "direct": "Soporte para iPhone y iPad, directamente de Casaxmore.",
+    "contactTag": "HABLEMOS",
+    "contactTitle": "Una duda. Una cámara. Una idea.",
+    "contactText": "Cuéntanos qué ocurre y lo revisamos contigo.",
+    "contactButton": "Escribir a soporte",
+    "mailNote": "Se abrirá tu aplicación de correo. Tú decides si enviarlo.",
+    "prepareTag": "PARA AYUDARTE MEJOR",
+    "prepareTitle": "Tres detalles para empezar.",
+    "prepareNote": "Incluye solo lo necesario.",
+    "deviceTitle": "Tu dispositivo",
+    "deviceText": "Modelo de iPhone o iPad, versión de iOS o iPadOS y versión de Live Webcams.",
+    "issueTitle": "La cámara o la función",
+    "issueText": "Nombre, país y fuente de la cámara, o la función que estabas utilizando. El enlace oficial puede ayudar.",
+    "contextTitle": "Qué ha ocurrido",
+    "contextText": "Describe los pasos y el mensaje que aparece. Oculta los datos personales en las capturas. No envíes contraseñas, datos de pago ni tu ubicación precisa.",
+    "faqTag": "RESPUESTAS RÁPIDAS",
+    "faqTitle": "Sigue explorando.",
+    "faqIntro": "Respuestas sobre cámaras, descubrimientos, ubicación y Pro.",
+    "closingTitle": "¿Necesitas una mano?",
+    "closingText": "Escríbenos tu duda o sugiere tu próxima vista del mundo.",
+    "closingButton": "Contactar con Casaxmore ↗",
+    "footer": "Soporte de Live Webcams para iPhone y iPad.",
+    "privacyLabel": "Privacidad del contacto",
+    "privacyTitle": "Tu privacidad",
+    "privacySummary": "José Manuel Casabona (Casaxmore) utiliza tu correo para atender la solicitud: el soporte de la app sobre una base contractual y las consultas generales por interés legítimo. Gmail y GitHub prestan los servicios de correo y alojamiento, que pueden implicar tratamiento internacional. Puedes ejercer tus derechos escribiéndonos.",
+    "privacyDetails": "Leer el aviso de privacidad del soporte",
+    "privacyFooter": "Privacidad del soporte",
+    "appPrivacy": "Privacidad de la app (inglés)",
+    "pageTitle": "Live Webcams · Ayuda y contacto",
+    "subject": "Live Webcams — Soporte",
+    "emailBody": "Hola, necesito ayuda con Live Webcams.\n\nModelo del dispositivo:\nVersión de iOS / iPadOS:\nVersión de Live Webcams:\n\nNombre, país y fuente de la cámara (si procede):\nQué ocurre:\nPasos para reproducirlo:\n",
+    "q0": "¿Por qué no se ve una cámara?",
+    "a0": "Las imágenes dependen de sus operadores. El mantenimiento, el tiempo, problemas de conexión o cambios en la fuente pueden interrumpirlas. Comprueba tu conexión, actualiza la app y prueba otra cámara. Si continúa, indícanos el nombre, el país y la fuente.",
+    "q1": "¿Todas las cámaras son vídeo en directo?",
+    "a1": "Muchas fuentes ofrecen imágenes fijas que se actualizan periódicamente; algunas tienen vídeos a intervalos. Consulta la hora de la imagen cuando esté disponible. Una cámara puede mostrar una imagen anterior, oscuridad o poca visibilidad. La frecuencia y la calidad dependen de la fuente.",
+    "q2": "¿Cómo funcionan Descubrir y los lugares de día?",
+    "a2": "Abre Descubrir, elige un interés o pulsa Sorpréndeme. El filtro de lugares de día estima la luz diurna con las coordenadas y la hora de la cámara. No garantiza sol, visibilidad ni que la última imagen se acabe de capturar.",
+    "q3": "¿Cómo puedo ampliar una imagen?",
+    "a3": "Abre una cámara, pulsa Pantalla completa y usa dos dedos para ampliar y recorrer la imagen. El detalle disponible depende de la resolución original de la fuente.",
+    "q4": "¿Tengo que compartir mi ubicación?",
+    "a4": "La ubicación es opcional y se utiliza en Cerca de mí mientras usas la app. Puedes explorar el mapa, buscar y elegir categorías sin conceder el permiso. Live Webcams no tiene una función para compartir tu ubicación con otras personas. La recogida automática de ubicación aproximada de AdMob está desactivada; sigue siendo posible la estimación general por IP.",
+    "q5": "Ya compré Pro. ¿Cómo lo restauro?",
+    "a5": "Abre Ajustes en Live Webcams y selecciona Restaurar compras con la misma cuenta de Apple de la compra. Pro elimina los anuncios y desbloquea de forma permanente los continentes compatibles y las ventajas Pro. Si no se recupera, cuéntanos qué ocurre sin enviar contraseñas ni datos completos de pago.",
+    "q6": "¿Cómo funciona el acceso temporal?",
+    "a6": "Cuando se ofrece, completar un anuncio bonificado opcional desbloquea el continente seleccionado durante una hora. Es un acceso temporal, distinto de la compra permanente Pro. La app muestra el tiempo de acceso restante. Si el anuncio no está disponible, inténtalo más tarde.",
+    "q7": "¿Puedo sugerir una cámara o una mejora?",
+    "a7": "Por supuesto. Envía el enlace de la fuente oficial y cuéntanos por qué te interesa el lugar. Revisamos la disponibilidad y las condiciones de reutilización antes de valorar una cámara. No podemos garantizar su incorporación. También nos encantará conocer tus ideas para la app."
+  }
+};
+  function setLanguage(language){
+    const locale = language === 'es' ? 'es' : 'en';
+    const copy = messages[locale];
+    document.documentElement.lang = locale;
+    document.title = copy.pageTitle;
+    document.querySelectorAll('[data-privacy-link]').forEach(link => { link.href = 'privacy.html?lang='+locale; });
+    document.querySelector('meta[name="description"]').content = copy.intro;
+    document.querySelectorAll('[data-i18n]').forEach(element => { element.textContent = copy[element.dataset.i18n]; });
+    document.querySelectorAll('[data-label]').forEach(element => { element.setAttribute('aria-label',copy[element.dataset.label]); });
+    document.querySelectorAll('[data-language]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.language === locale)));
+    document.getElementById('email-support').href = 'mailto:casaxmore@gmail.com?subject='+encodeURIComponent(copy.subject)+'&body='+encodeURIComponent(copy.emailBody);
+  }
+  document.querySelectorAll('[data-language]').forEach(button => button.addEventListener('click',() => setLanguage(button.dataset.language)));
+  const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
+  setLanguage(requestedLanguage || 'en');
+</script>
 </body>
 </html>
